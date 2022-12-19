@@ -1,23 +1,14 @@
-﻿// Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
+﻿// Напишите программу, которая на вход принимает число и выдаёт, 
+// является ли число чётным (делится ли оно на два без остатка).
 
-Console.Write("Введите первое целое число:");
-int number1 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите второе целое число:");
-int number2 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите третье целое число:");
-int number3 = Convert.ToInt32(Console.ReadLine());
-int max = number1;
-if (max < number2 && number2 > number3)
+Console.Write("Введите целое число:");
+int number = Convert.ToInt32(Console.ReadLine());
+
+if (number % 2 == 0)
 {
-    max = number2;
-    Console.WriteLine($"Max - {max}");
-}
-else if (max < number3 && number3 > number2)
-{
-    max = number3;
-    Console.WriteLine($"Max - {max}");
+    Console.WriteLine("Да, четное");
 }
 else
 {
-    Console.WriteLine($"Max - {max}");
+    Console.WriteLine("Нет, не четное");
 }
