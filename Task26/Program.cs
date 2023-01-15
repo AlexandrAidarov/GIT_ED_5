@@ -7,8 +7,8 @@ Console.WriteLine($"В числе {number} : {numbers} цифр");
 
 int Numbers(int num)
 {
-    int count = 1;
-    while (num >= 10)
+    int count = 0;
+    while (num != 0)
     {
         num = num / 10;
         count = count + 1;
