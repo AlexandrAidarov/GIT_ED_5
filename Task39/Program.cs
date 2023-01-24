@@ -24,7 +24,21 @@ void PrintArray(int[] arr)
 
 // Array.Reverse(array);
 
-void ReverseArray(int[] arr);
+// void ReverseArrayVersion2(int[] array)
+// {
+//     int index1 = 0;
+//     int index2 = array.Length - 1;
+//     while (index1 < index2)
+//     {
+//         int obj = array[index1];
+//         array[index1] = array[index2];
+//         array[index2] = obj;
+//         index1 ++;
+//         index2 --;
+//     }
+// }
+
+void ReverseArray(int[] arr)
 {
     for (int i = 0; i < arr.Length/2; i++)
     {
