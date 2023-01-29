@@ -29,7 +29,21 @@ void PrintMatrix(int[,] matrix)
         Console.WriteLine("]");
     }
 }
+void FindEvenIndex(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            if (i % 2 == 0 && j % 2 == 0) matrix[i, j] *= matrix[i, j];
+        }
+       
+    }
+}
 
-int[,] array2D = CreateMatrixRndInt(3, 4, -99, 99);
+int[,] array2D = CreateMatrixRndInt(3, 4, 1, 10);
+
 PrintMatrix(array2D);
-
+FindEvenIndex(array2D);
+Console.WriteLine();
+PrintMatrix(array2D);
