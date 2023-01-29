@@ -6,13 +6,13 @@
 
 
 Console.WriteLine("Введите число (k1)");
-int k1 = Convert.ToInt32(Console.ReadLine());
+double k1 = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Введите число (b1)");
-int b1 = Convert.ToInt32(Console.ReadLine());
+double b1 = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Введите число (k2)");
-int k2 = Convert.ToInt32(Console.ReadLine());
+double k2 = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Введите число (b2)");
-int b2 = Convert.ToInt32(Console.ReadLine());
+double b2 = Convert.ToDouble(Console.ReadLine());
 
 // y = k1 * x + b1, y = k2 * x + b2
 // k1 * x + b1 = k2 * x + b2
@@ -26,15 +26,15 @@ if (k1 == k2)
 }
 else
 {
-    int x = SerchingAnswer(k1, b1, k2, b2);
+    double x = SerchingAnswer(k1, b1, k2, b2);
     
-    int y = k1 * x + b1;
+    double y = k1 * x + b1;
     Console.WriteLine( $"Линии пересекаются в точке с коорддинатами {x},{y}");
 }
 
-int SerchingAnswer(int r1, int s1, int r2, int s2)
+double SerchingAnswer(double r1, double s1, double r2, double s2)
 {
-    int x1 = (s2 - s1) / (r1 - r2);
+    double x1 = (s2 - s1) / (r1 - r2);
     return x1;
 }
 
