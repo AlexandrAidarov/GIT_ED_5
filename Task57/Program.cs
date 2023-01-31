@@ -47,26 +47,34 @@ int[] MatrixToArray(int[,] matrix)
             temp++;
         }
     }
+    return array;
 }
 
-int[,] array2D = CreateMatrixRndInt(3, 4, 1, 9);
+int[,] array2D = CreateMatrixRndInt(3, 3, 1, 9);
 PrintMatrix(array2D);
 int[] array = MatrixToArray(array2D);
 
 Array.Sort(array);
+UniqElem(array);
 
-int[] UniqElem(int[] arr)
+void UniqElem(int[] arr)
 {
-    int count = 0;
-    int[] arrayUniq = arr.Distinct().ToArray;
-    int[,] arr2D = new int[arrayUniq.Length,1];
-
-    int currentElem = arr[0];
-
-    for (int i = 0; i < arr.Length; i++)
+    int number = arr[0];
+    int count = 1;
+    
+    for (int i = 1; i < arr.Length; i++)
     {
-        if()
-
-
+        if(arr[i] == number) count++;
+        else
+        {
+            Console.WriteLine($"{number} -> {count}");
+            number = arr[i];
+            count = 1;
+        }
     }
+    Console.WriteLine($"{number} -> {count}");
 }
+
+
+
+
