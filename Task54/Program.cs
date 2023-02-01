@@ -41,26 +41,36 @@ void PrintMatrix(int[,] matrix)
 }
 
 
-int[,] array2D = CreateMatrixRndInt(3, 3, 1, 9);
+int[,] array2D = CreateMatrixRndInt(4, 4, 1, 9);
 PrintMatrix(array2D);
-/*
+Console.WriteLine();
+SortMatrix(array2D);
+PrintMatrix(array2D);
+
 void SortMatrix(int[,] matrix)
 {
     
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        int number = 0;
-        int min = matrix[i, j];
-        for (int j = 0; j < matrix.GetLength(1); j++)
+        for (int j = 0; j < matrix.GetLength(1) - 1; j++)
         {
-            if (min < matrix[i, j]) 
+            int countJ = 0;
+            while (countJ < matrix.GetLength(1) - 1)
             {
-                number = matrix[i, j]
-
+                if (matrix[i, j] < matrix[i, countJ])
+                {
+                    
+                    int max = matrix[i, j];
+                    matrix[i, j] = matrix[i, countJ];
+                    matrix[i, countJ] = max;
+                    j = 0;
+                }
+                countJ++;
             }
-            else Console.Write($"{matrix[i, j],5} ");
+
+            
+            // else Console.Write($"{matrix[i, j],5} ");
         }
-        j = 0;
+        
     }
 }
-*/
